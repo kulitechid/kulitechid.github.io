@@ -5,6 +5,8 @@ import { defineConfig } from 'vite'
 
 function cleanLegalRouteMiddleware() {
   const routes = new Map([
+    ['/kanguru-siaga', '/kanguru-siaga/index.html'],
+    ['/kanguru-siaga/', '/kanguru-siaga/index.html'],
     ['/kanguru-siaga/privacy-policy', '/kanguru-siaga/privacy-policy/index.html'],
     ['/kanguru-siaga/privacy-policy/', '/kanguru-siaga/privacy-policy/index.html'],
     ['/kanguru-siaga/term-of-use', '/kanguru-siaga/term-of-use/index.html'],
@@ -51,6 +53,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(import.meta.dirname, 'index.html'),
+        kanguruSiaga: resolve(import.meta.dirname, 'kanguru-siaga/index.html'),
         privacyPolicy: resolve(import.meta.dirname, 'kanguru-siaga/privacy-policy/index.html'),
         termOfUse: resolve(import.meta.dirname, 'kanguru-siaga/term-of-use/index.html'),
         nippia: resolve(import.meta.dirname, 'nippia/index.html'),

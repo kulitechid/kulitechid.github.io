@@ -123,9 +123,20 @@ export default function Footer({ isHome = true }) {
                 <div className="text-xs text-slate-400">Smart Travel Companion &amp; Panduan Wisata Lombok</div>
               </li>
               <li className="p-3 rounded-xl bg-white/[0.02] border border-white/5">
-                <div className="font-semibold text-white">Kanguru Siaga</div>
+                <div className="font-semibold text-white">
+                  <a href="/kanguru-siaga" className="hover:text-amber-300 transition-colors">
+                    Kanguru Siaga
+                  </a>
+                </div>
                 <div className="text-xs text-slate-400">Pendamping Perawatan Khusus Bayi Berat Lahir Rendah di Rumah</div>
                 <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] font-mono">
+                  <a
+                    href="/kanguru-siaga"
+                    className="text-amber-400/90 hover:text-amber-300 hover:underline transition-colors"
+                  >
+                    Overview
+                  </a>
+                  <span className="text-slate-600">•</span>
                   <a
                     href="/kanguru-siaga/privacy-policy"
                     className="text-amber-400/90 hover:text-amber-300 hover:underline transition-colors"

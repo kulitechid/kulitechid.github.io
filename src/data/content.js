@@ -41,6 +41,7 @@ export const PRODUCTS = [
     badgeColor: "bg-amber-500/10 text-amber-400 border-amber-500/30",
     mockupType: "health",
     legalLinks: [
+      { label: "Overview Produk", href: "/kanguru-siaga" },
       { label: "Kebijakan Privasi", href: "/kanguru-siaga/privacy-policy" },
       { label: "Ketentuan Penggunaan", href: "/kanguru-siaga/term-of-use" },
     ],

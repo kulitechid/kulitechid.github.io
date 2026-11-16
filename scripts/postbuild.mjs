@@ -14,6 +14,11 @@ const pages = [
     cleanHtmlPath: null,
   },
   {
+    modulePath: "/src/pages/KanguruSiagaLandingPage.jsx",
+    distHtmlPath: resolve(distDir, "kanguru-siaga/index.html"),
+    cleanHtmlPath: resolve(distDir, "kanguru-siaga.html"),
+  },
+  {
     modulePath: "/src/pages/PrivacyPolicyPage.jsx",
     distHtmlPath: resolve(distDir, "kanguru-siaga/privacy-policy/index.html"),
     cleanHtmlPath: resolve(distDir, "kanguru-siaga/privacy-policy.html"),
