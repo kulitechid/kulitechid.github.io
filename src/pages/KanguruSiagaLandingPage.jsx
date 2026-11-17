@@ -57,7 +57,7 @@ const CLINICAL_STATS = [
   {
     value: "100% Offline",
     label: "Privasi Data Terenkripsi",
-    sub: "SQLite Room v12 lokal, bebas iklan & pelacak komersial",
+    sub: "SQLite Room v13 lokal, bebas iklan & pelacak komersial",
     badge: "UU PDP No. 27/2022",
     color: "from-emerald-500/20 to-teal-500/10 border-emerald-500/30 text-emerald-300",
   },
@@ -176,7 +176,7 @@ const FAQS = [
   },
   {
     q: "Di mana data kesehatan dan foto bayi saya disimpan?",
-    a: "Privasi Anda adalah prioritas utama. Seluruh catatan harian PMK, riwayat suhu, foto profil bayi, dokumen lampiran medis, dan log pengukuran antropometri tersimpan 100% secara lokal di memori internal perangkat Anda (SQLite Room v12 terisolasi Sandbox). Hanya data pendaftaran profil awal saat onboarding yang dicadangkan satu kali secara terenkripsi ke Cloud Firestore demi integritas sistem.",
+    a: "Privasi Anda adalah prioritas utama. Seluruh berkas lampiran medis, foto profil bayi, dan riwayat operasional tersimpan privat di memori internal perangkat Anda (SQLite Room v13 terisolasi Sandbox). Sinkronisasi medis ke Cloud Firestore terlindungi enkripsi TLS dan aturan CEL terproteksi, bebas dari ID Iklan (AD_ID) dan analitik komersial pihak ketiga.",
   },
   {
     q: "Apakah aplikasi ini dapat menggantikan pemeriksaan dokter spesialis anak?",
@@ -779,7 +779,7 @@ export default function KanguruSiagaLandingPage() {
                     </div>
                     <div className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
                       <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
-                      <span><strong>Aturan Database Ketat (CEL):</strong> Sinkronisasi Cloud Firestore onboarding dilindungi aturan tulis create-only.</span>
+                      <span><strong>Aturan Database Ketat (CEL):</strong> Sinkronisasi Cloud Firestore dilindungi validasi skema dan aturan Common Expression Language (CEL) terproteksi.</span>
                     </div>
                     <div className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
                       <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />

@@ -256,7 +256,12 @@ function SectionBlock({ block, meta }) {
 
   if (block.type === "table") {
     return (
-      <div className="overflow-x-auto rounded-2xl border border-white/10 bg-[#070a12]">
+      <div
+        tabIndex={0}
+        role="region"
+        aria-label={block.ariaLabel || "Tabel rincian dokumen legal"}
+        className="overflow-x-auto rounded-2xl border border-white/10 bg-[#070a12] focus:outline-none focus:ring-1 focus:ring-cyan-500/50"
+      >
         <table
           className={`w-full text-left border-collapse ${
             block.minWidthClass || "min-w-[580px]"
