@@ -75,7 +75,7 @@ const FOUR_PILLARS = [
       "Timer Kontak Kulit Real-Time: Stopwatch presisi detik-demi-detik dengan pencatatan suhu tubuh aksila sebelum & sesudah sesi.",
       "Kolaborasi Estafet 3 Pengasuh: Fitur serah terima pengasuh (Ibu, Ayah, Pendamping) tanpa memutus sesi timer yang berjalan.",
       "Visualisasi 24 Jam & Target 8 Jam: Lacak capaian dekapan harian dengan progress bar multi-segmen dan tren kepatuhan 7 hari.",
-      "3 Jadwal Pengingat Estafet Harian: Jadwal Pagi (07:00), Siang (15:00), dan Malam (23:00) bersuara khusus berulang.",
+      "3 Jadwal Pengingat Estafet Harian: Jadwal Pagi (07:00), Siang (15:00), dan Malam (23:00) dengan nada notifikasi khusus satu kali putar.",
     ],
     image: "/images/kanguru-siaga/screen-pmk-timer.png",
     imageAlt: "Tampilan Timer Perawatan Metode Kanguru di Kanguru Siaga",
@@ -105,9 +105,9 @@ const FOUR_PILLARS = [
     icon: Bell,
     points: [
       "12 Jadwal Harian Terstruktur: Mengakomodasi kebutuhan nutrisi bayi BBLR yang memiliki kapasitas lambung kecil dan rentan drop gula darah.",
-      "Nada Dering Khusus Berulang: Audio alarm yang terdengar jelas bahkan saat ponsel terkunci atau aplikasi sedang tertutup.",
+      "Nada Notifikasi Khusus (Single-Play): Suara pengingat khas satu kali putar (non-looping) yang terdengar jelas tanpa mengagetkan bayi.",
       "Kontrol Cepat di Notifikasi: Aksi interaktif langsung untuk 'Matikan' atau 'Tunda 10 Menit' (Snooze) tanpa harus membuka aplikasi.",
-      "Sequential Single Next-Alarm: Arsitektur penjadwalan cerdas hemat baterai dengan auto-stop aman 5 menit.",
+      "Sequential Single Next-Alarm: Arsitektur penjadwalan cerdas hemat baterai dengan perlindungan henti otomatis.",
     ],
     image: "/images/kanguru-siaga/screen-pmk-reminder.png",
     imageAlt: "Tampilan Jadwal dan Pengingat Estafet di Kanguru Siaga",
@@ -622,16 +622,16 @@ export default function KanguruSiagaLandingPage() {
                       12 Jadwal Minum ASI Interval 2 Jam (OGT / NGT Friendly)
                     </h3>
                     <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                      Bayi kecil rentan mengalami penurunan kadar gula darah (hipoglikemia) yang berbahaya bagi otak apabila jadwal minumnya terlambat. Sistem alarm Kanguru Siaga dirancang tahan banting dengan teknologi Android 14+ Foreground Service.
+                      Bayi kecil rentan mengalami penurunan kadar gula darah (hipoglikemia) yang berbahaya bagi otak apabila jadwal minumnya terlambat. Sistem alarm Kanguru Siaga dirancang andal dan hemat daya dengan arsitektur Sequential Single Next-Alarm dan saluran notifikasi khusus.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3">
                       <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
-                        <div className="text-xs font-bold text-white">Nada Dering Khusus Berulang</div>
-                        <div className="text-xs text-slate-400 mt-1">Audio alarm khas yang terus berdering lembut hingga pengasuh merespons.</div>
+                        <div className="text-xs font-bold text-white">Nada Notifikasi Khusus (Single-Play)</div>
+                        <div className="text-xs text-slate-400 mt-1">Suara pengingat khas satu kali putar (non-looping) agar lembut dan tidak mengagetkan bayi.</div>
                       </div>
                       <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
-                        <div className="text-xs font-bold text-white">Auto-Stop Proteksi 5 Menit</div>
-                        <div className="text-xs text-slate-400 mt-1">Otomatis berhenti berdering setelah 5 menit demi mencegah baterai terkuras habis.</div>
+                        <div className="text-xs font-bold text-white">Hemat Baterai &amp; Henti Otomatis</div>
+                        <div className="text-xs text-slate-400 mt-1">Hanya mendaftarkan 1 jadwal aktif terdekat dengan pemutaran audio sekali putar agar hemat daya.</div>
                       </div>
                       <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
                         <div className="text-xs font-bold text-white">Aksi Cepat Snooze / Matikan</div>

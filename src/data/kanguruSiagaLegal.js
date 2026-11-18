@@ -250,17 +250,15 @@ export const TERMS_OF_USE_DATA = {
                 { bold: "Timer & Alarm Estafet Sesi PMK (Mendesak / Urgent): " },
                 "Penggunaan pengatur waktu (",
                 { italic: "timer" },
-                ") kontinu/intermiten dan input sesi manual untuk menghitung akumulasi jam dekapan harian. Dilengkapi sistem pengingat 3 jadwal estafet harian (Pagi, Siang, dan Malam) dengan alarm audio bersuara khusus berulang (",
-                { italic: "custom looping ringtone" },
-                "), kontrol interaktif notifikasi untuk ",
+                ") kontinu/intermiten dan input sesi manual untuk menghitung akumulasi jam dekapan harian. Dilengkapi sistem pengingat 3 jadwal estafet harian (Pagi, Siang, dan Malam) dengan alarm audio bersuara khusus satu kali putar (",
+                { italic: "custom ringtone" },
+                " non-looping), kontrol interaktif notifikasi untuk ",
                 { bold: '"Matikan"' },
                 " atau ",
                 { bold: '"Tunda 10 Menit"' },
                 " (",
                 { italic: "snooze" },
-                "), serta perlindungan henti otomatis (",
-                { italic: "auto-stop" },
-                " 5 menit) guna menghemat daya baterai.",
+                "), serta perlindungan henti otomatis guna menghemat daya baterai.",
               ],
             },
             {
@@ -272,9 +270,9 @@ export const TERMS_OF_USE_DATA = {
             {
               content: [
                 { bold: "Jadwal & Alarm Pemberian ASI (Mendesak / Urgent): " },
-                "Pengingat nutrisi enteral terstruktur (12 jadwal harian tetap dengan interval 2 jam, termasuk bagi bayi dengan selang OGT/NGT) menggunakan alarm bersuara khusus berulang (",
-                { italic: "custom looping ringtone" },
-                ") dan tombol kontrol langsung ",
+                "Pengingat nutrisi enteral terstruktur (12 jadwal harian tetap dengan interval 2 jam, termasuk bagi bayi dengan selang OGT/NGT) menggunakan alarm bersuara khusus satu kali putar (",
+                { italic: "custom ringtone" },
+                " non-looping) dan tombol kontrol langsung ",
                 { bold: '"Matikan"' },
                 " atau ",
                 { bold: '"Tunda 10 Menit"' },
@@ -1131,7 +1129,7 @@ export const PRIVACY_POLICY_DATA = {
             [
               [{ code: "POST_NOTIFICATIONS" }],
               [
-                "Menampilkan notifikasi timer sesi PMK yang sedang berjalan, pengingat alarm mendesak (PMK & ASI), pengingat rutin penapisan klinis & grafik Fenton, serta notifikasi informatif jadwal terlewat.",
+                "Menampilkan notifikasi timer sesi PMK yang sedang berjalan, pengingat alarm mendesak (PMK & ASI) dengan nada notifikasi khusus beserta tombol aksi ('Matikan' & 'Tunda 10 Menit'), pengingat rutin penapisan klinis & grafik Fenton, serta notifikasi informatif jadwal terlewat.",
               ],
               ["Opsional / Dapat dimatikan di Pengaturan"],
             ],
@@ -1170,33 +1168,11 @@ export const PRIVACY_POLICY_DATA = {
               ["Otomatis oleh sistem demi keandalan alarm"],
             ],
             [
-              [{ code: "FOREGROUND_SERVICE" }],
-              [
-                "Menjalankan layanan latar depan (",
-                { code: "AlarmSoundService" },
-                ") saat jadwal alarm mendesak (PMK & ASI) berbunyi, sehingga pengingat audio dapat berbunyi andal dengan notifikasi kontrol interaktif meskipun aplikasi sedang tertutup atau layar ponsel terkunci.",
-              ],
-              ["Otomatis saat alarm mendesak aktif"],
-            ],
-            [
-              [{ code: "FOREGROUND_SERVICE_MEDIA_PLAYBACK" }],
-              [
-                "Menentukan jenis spesifik layanan latar depan untuk pemutaran audio alarm (",
-                { code: "mediaPlayback" },
-                ") sesuai ketentuan kebijakan Google Play Android 14+ (API 34). Layanan ini hanya aktif selama alarm berdering dan otomatis berhenti setelah pengguna menekan \"Matikan\", \"Tunda 10 Menit\", atau batas waktu aman (5 menit) tercapai.",
-              ],
-              ["Kepatuhan Google Play Android 14+ (API 34)"],
-            ],
-            [
               [{ code: "WAKE_LOCK" }],
               [
-                "Menjaga prosesor perangkat tetap aktif sementara (",
-                { italic: "partial wake lock" },
-                ") selama alarm bersuara agar pemutaran nada pengingat nutrisi dan PMK tidak terputus secara mendadak oleh manajemen daya sistem saat layar padam. Memiliki batas waktu aman otomatis (",
-                { italic: "timeout" },
-                ").",
+                "Menjaga keandalan pengiriman pengingat dan sinkronisasi latar belakang saat perangkat dalam mode tidur.",
               ],
-              ["Otomatis saat alarm berbunyi"],
+              ["Otomatis saat pengingat aktif"],
             ],
             [
               [{ code: "VIBRATE" }],
