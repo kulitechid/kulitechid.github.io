@@ -43,6 +43,11 @@ const pages = [
     distHtmlPath: resolve(distDir, "nippia/terms/index.html"),
     cleanHtmlPath: resolve(distDir, "nippia/terms.html"),
   },
+  {
+    modulePath: "/src/pages/NaksustorePrivacyPolicyPage.jsx",
+    distHtmlPath: resolve(distDir, "naksustore/privacy-policy/index.html"),
+    cleanHtmlPath: resolve(distDir, "naksustore/privacy-policy.html"),
+  },
 ];
 
 async function prerender() {

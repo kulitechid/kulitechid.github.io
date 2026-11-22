@@ -17,6 +17,8 @@ function cleanLegalRouteMiddleware() {
     ['/nippia/privacy-policy/', '/nippia/privacy-policy/index.html'],
     ['/nippia/terms', '/nippia/terms/index.html'],
     ['/nippia/terms/', '/nippia/terms/index.html'],
+    ['/naksustore/privacy-policy', '/naksustore/privacy-policy/index.html'],
+    ['/naksustore/privacy-policy/', '/naksustore/privacy-policy/index.html'],
   ])
 
   const attachMiddleware = (middlewares) => {
@@ -59,6 +61,7 @@ export default defineConfig({
         nippia: resolve(import.meta.dirname, 'nippia/index.html'),
         nippiaPrivacyPolicy: resolve(import.meta.dirname, 'nippia/privacy-policy/index.html'),
         nippiaTerms: resolve(import.meta.dirname, 'nippia/terms/index.html'),
+        naksustorePrivacyPolicy: resolve(import.meta.dirname, 'naksustore/privacy-policy/index.html'),
       },
     },
   },
